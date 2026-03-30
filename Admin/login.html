@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login In</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-white font-sans">
+
+        <div
+            class="hidden lg:flex flex-col justify-center items-center bg-[#1E293B] p-12 text-white relative overflow-hidden">
+            <div class="absolute top-[-10%] left-[-10%] w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"></div>
+
+            <div class="relative z-10 max-w-md text-center">
+                <h1 class="text-4xl font-bold mb-6 tracking-tight uppercase">Merchant Portal</h1>
+                <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                    Manage your boutique inventory, track global sales, and monitor performance with our
+                    precision-engineered dashboard.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col justify-center items-center p-8 lg:p-24 bg-white">
+            <div class="w-full max-w-sm">
+                <div class="mb-10 text-center lg:text-left">
+                    <h2 class="text-3xl font-semibold text-[#374151]">Welcome Back</h2>
+                    <p class="text-gray-500 mt-2">Please enter your merchant credentials</p>
+                </div>
+
+                <form id="loginForm" class="space-y-6">
+
+                    <div id="errorMessage" class="text-xs font-bold uppercase tracking-widest mb-4"></div>
+
+                    <div>
+                        <label for="email"
+                            class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Email
+                            Address</label>
+                        <input type="email" id="email" placeholder="merchant@boutique.com"
+                            class="w-full border-b-2 border-gray-100 py-3 outline-none focus:border-[#4F4655] transition-colors text-gray-800 placeholder-gray-300">
+                    </div>
+
+                    <div>
+                        <label for="password"
+                            class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Password</label>
+                        <input type="password" id="password" placeholder="••••••••"
+                            class="w-full border-b-2 border-gray-100 py-3 outline-none focus:border-[#4F4655] transition-colors text-gray-800 placeholder-gray-300">
+                    </div>
+
+                    <button id="signinbtn"
+                        class="w-full bg-[#4F46E5] hover:bg-[#4338CA] text-white font-bold py-4 rounded-sm tracking-widest uppercase text-xs transition-all shadow-lg shadow-indigo-200">
+                        Sign In to Dashboard
+                    </button>
+                </form>
+
+                <p class="mt-12 text-center text-gray-400 text-sm">
+                    Don't have a merchant account?
+                    <a href="./merchant.html"
+                        class="text-[#374151] font-bold border-b border-gray-300 hover:border-[#374151] transition-all pb-1">Apply
+                        Now</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./login.js"></script>
+
+</html>

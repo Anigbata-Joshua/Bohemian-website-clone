@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users | Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex h-screen overflow-hidden">
+        <aside class="w-64 bg-blue-950 text-[#dedede] flex flex-col h-screen sticky top-0">
+            <div class="p-6 text-2xl font-bold border-b border-gray-700">Admin.</div>
+            <nav class="flex-1 p-4 space-y-3 overflow-y-auto">
+                <a href="./dashboard.html" class="flex items-center gap-3 py-2 px-3 bg-blue-900 rounded-lg">📊
+                    Dashboard</a>
+                <a href="./view_category.html"
+                    class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">🈯 Category</a>
+                <a href="./view_product.html"
+                    class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">🛒 Products</a>
+                <a href="./users.html"
+                    class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">👥 Users</a>
+<a href="./cart.html" class="flex items-center gap-3 py-2 px-3 bg-blue-900 rounded-lg">🛍️ My Cart</a>
+                <a href="./create_product.html"
+                    class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">➕ Create
+                    Product</a>
+                <a href="./creat_users.html"
+                    class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">➕ Create User</a>
+                <a href="./create_category.html"
+                    class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">➕ Create
+                    Category</a>
+            </nav>
+            <div class="p-4 border-t border-gray-700 text-sm flex flex-col gap-2">
+                <button id="logout_btn_sidebar"
+                    class="w-full py-2 rounded bg-red-600 text-white hover:bg-red-700 cursor-pointer">Logout</button>
+                <p class="text-xs text-gray-400 text-center">&copy; 2026 Rework Admin</p>
+            </div>
+        </aside>
+
+        <div class="flex-1 flex flex-col overflow-y-auto">
+
+            <header class="flex justify-between items-center p-5 bg-white shadow-sm sticky top-0 z-10">
+                <h1 class="text-xl font-semibold text-gray-800 tracking-tight">Customer Base</h1>
+                <div class="relative">
+                    <button class="flex items-center gap-2 cursor-pointer" id="dropdown_btn">
+                        <span
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-800 font-bold">👤</span>
+                        <h4 class="font-light text-sm">Admin<span class="text-gray-700 font-medium"
+                                id="merchant_name"></span></h4>
+                    </button>
+                </div>
+            </header>
+
+            <main class="p-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="mb-8 flex justify-between items-end">
+                        <div>
+                            <span
+                                class="text-[10px] font-bold text-blue-600 uppercase tracking-[0.3em] block mb-2">Community</span>
+                            <h2 class="text-3xl font-light text-gray-800 tracking-tight">Registered <span
+                                    class="font-semibold">Users</span></h2>
+                        </div>
+                        <a href="./creat_users.html"
+                            class="px-6 py-2 bg-black text-white text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-gray-800 transition shadow-lg shadow-gray-200">
+                            Add New User
+                        </a>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                        <table class="w-full text-left border-collapse">
+                            <thead class="bg-gray-50/50">
+                                <tr>
+                                    <th class="px-6 py-5 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                                        User Details</th>
+                                    <th class="px-6 py-5 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                                        Contact Info</th>
+                                    <th class="px-6 py-5 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                                        Phone</th>
+                                    <th
+                                        class="px-6 py-5 text-[10px] font-bold text-gray-400 uppercase tracking-widest text-center">
+                                        Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="users_container" class="divide-y divide-gray-50">
+                                <tr>
+                                    <td colspan="4"
+                                        class="p-10 text-center text-gray-400 animate-pulse uppercase text-[10px] tracking-widest">
+                                        Synchronizing user data...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="message"
+                        class="mt-6 text-center text-[10px] uppercase tracking-widest text-gray-400 font-medium"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+<script src="./users.js"></script>
+
+</html>

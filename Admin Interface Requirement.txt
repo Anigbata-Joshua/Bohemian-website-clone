@@ -1,0 +1,60 @@
+Dashboard Admin Interface Requirement -- Create a UI of choice that includes the following, using the added images as a guide for creating a dashboard system.
+
+1. Dashboard Page
+	Cards view for:
+		Total Products
+		Total Users
+		Total Products in cart	
+	And, a table view showing 10 products.
+
+2. Product page
+	product grid view
+		This view should include
+			Editing of product
+			Deleting of product
+Note: When creating a product, use a unique category name for creating all of your products, so you can be able to filter from the many products and get the ones you created using your category name.
+
+3. Users Page:
+	Table View of all users
+		This view should include
+			Deleting of users
+			Editing of users
+
+4. Create Product Page
+	This view should be a form to create a new product
+	Form:
+	Name
+	image
+	price
+	quantity
+	description
+	category, etc.
+
+5. Create User
+	This view should be a form to create a new user
+	Name
+	Email
+	Phone Number
+	Password
+
+	BASE_URL http://ecommerce.reworkstaging.name.ng/v2
+
+==========
+Merchant
+==========
+
+POST /merchants
+DESCP: To create a merchant who will kick starts the whole process
+{
+	"first_name":"John",
+	"last_name":"Doe",
+	"email":"ap@gmail.com",
+	"phone":"0901234567",
+	"store_name":"Nicolas Aluminium",
+	"descp":"All is well that ends well",
+	"icon":"",
+
+	"banner":"",
+	"phones":[098767887,98657654]
+	"password":"123"
+}

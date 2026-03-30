@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marchant</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<div class="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-white font-sans">
+
+    <div
+        class="hidden lg:flex flex-col justify-center items-center bg-[#1E293B] p-12 text-white relative overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 max-w-md text-center">
+            <h1 class="text-4xl font-bold mb-6 tracking-tight uppercase">Merchant Registration</h1>
+            <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                Start selling to a global audience. Set up your boutique storefront in minutes and manage your inventory
+                with precision.
+            </p>
+        </div>
+    </div>
+    <div class="flex flex-col justify-center items-center p-8 lg:p-16 bg-white overflow-y-auto">
+        <div class="w-full max-w-lg">
+            <div class="mb-8 text-center lg:text-left">
+                <h2 class="text-3xl font-semibold text-[#374151]">Create Account</h2>
+                <p class="text-gray-500 mt-2 text-sm">Fill in the details to register your boutique</p>
+            </div>
+
+            <form class="space-y-5">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="first_name"
+                            class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">First
+                            Name</label>
+                        <input type="text" id="first_name"
+                            class="w-full border-b border-gray-200 py-2 outline-none focus:border-[#4F46E5] transition-colors text-gray-800 placeholder-gray-200">
+                    </div>
+                    <div>
+                        <label for="last_name"
+                            class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Last
+                            Name</label>
+                        <input type="text" id="last_name"
+                            class="w-full border-b border-gray-200 py-2 outline-none focus:border-[#4F46E5] transition-colors text-gray-800 placeholder-gray-200">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="email"
+                            class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Email
+                            Address</label>
+                        <input type="email" id="email" placeholder="merchant@boutique.com"
+                            class="w-full border-b border-gray-200 py-2 outline-none focus:border-[#4F46E5] transition-colors text-gray-800 placeholder-gray-200">
+                    </div>
+                    <div>
+                        <label for="phone"
+                            class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Phone
+                            Number</label>
+                        <input type="tel" id="phone"
+                            class="w-full border-b border-gray-200 py-2 outline-none focus:border-[#4F46E5] transition-colors text-gray-800 placeholder-gray-200">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="store_name"
+                        class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Store
+                        Name</label>
+                    <input type="text" id="store_name"
+                        class="w-full border-b border-gray-200 py-2 outline-none focus:border-[#4F46E5] transition-colors text-gray-800 placeholder-gray-200">
+                </div>
+
+                <div>
+                    <label for="shop_description"
+                        class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Description</label>
+                    <textarea id="shop_description" rows="2" placeholder="Tell us about your shop..."
+                        class="w-full border-b border-gray-200 py-2 outline-none focus:border-[#4F46E5] transition-colors text-gray-800 placeholder-gray-200 resize-none"></textarea>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="password"
+                            class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Password</label>
+                        <input type="password" id="password" placeholder="••••••••"
+                            class="w-full border-b border-gray-200 py-2 outline-none focus:border-[#4F46E5] transition-colors text-gray-800 placeholder-gray-200">
+                    </div>
+                    <div>
+                        <label for="confirm_password"
+                            class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Confirm</label>
+                        <input type="password" id="confirm_password" placeholder="••••••••"
+                            class="w-full border-b border-gray-200 py-2 outline-none focus:border-[#4F46E5] transition-colors text-gray-800 placeholder-gray-200">
+                    </div>
+                </div>
+
+                <label class="flex items-center gap-3 cursor-pointer mt-4">
+                    <input type="checkbox" class="accent-[#4F46E5] h-4 w-4">
+                    <span class="text-[12px] text-gray-500">I agree to the <a href="#"
+                            class="text-indigo-600 border-b border-indigo-200">Terms & Conditions</a></span>
+                </label>
+
+                <div id="error_message"
+                    class="text-rose-500 text-xs font-bold uppercase tracking-widest text-center min-h-[1.25rem]"></div>
+
+                <button id="create_acc_btn"
+                    class="w-full bg-[#4F46E5] hover:bg-[#4338CA] text-white font-bold py-4 rounded-sm tracking-[0.2em] uppercase text-xs transition-all shadow-lg shadow-indigo-100">
+                    Create Merchant Account
+                </button>
+            </form>
+
+            <p class="mt-8 text-center text-gray-400 text-sm">
+                Already registered?
+                <a href="./login.html"
+                    class="text-[#374151] font-bold border-b border-gray-300 hover:border-[#374151] transition-all pb-1 ml-1">Log
+                    In</a>
+            </p>
+        </div>
+    </div>
+</div>
+<script src="./merchant.js"></script>
+
+</html>

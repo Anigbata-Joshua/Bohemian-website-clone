@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="">
+    <div class="bg-black text-white text-[14px] py-2 text-center tracking-widest uppercase">Free shipping on orders
+        over $300</div>
+    <header class="sticky top-0 z-50 bg-white">
+        <div class="container mx-auto px-4 py-8 flex flex-col items-center relative ">
+
+            <div class="nav_icons absolute right-6 top-1/2 -translate-y-1/2 flex space-x-5 text-xl text-gray-600">
+                <a href="#" class="hover:text-black transition-colors w-[22px] flex items-center justify-center">
+                    <img src="./image/flag.png" alt="Language" class="w-full">
+                </a>
+
+                <a href="./account.html"
+                    class="hover:text-black transition-colors w-[22px] flex items-center justify-center">
+                    <img src="./image/user.png" alt="Account" class="w-full">
+                </a>
+
+                <a href="#" class="hover:text-black transition-colors w-[22px] flex items-center justify-center">
+                    <i class="ri-heart-3-line"></i>
+                </a>
+
+                <a href="./cart.html"
+                    class="hover:text-black transition-colors relative w-[22px] flex items-center justify-center">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span
+                        class="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-black text-[10px] font-bold text-white">
+                        0
+                    </span>
+                </a>
+                <a href="#" class="hover:text-black transition-colors w-[22px] flex items-center justify-center">
+                    <i class="ri-search-line"></i>
+                </a>
+            </div>
+
+            <div class="nav_logo">
+                <a href="./bohemaintraders.html">
+                    <img src="./image/logo.webp" alt="Logo" class="w-[250px] md:w-[300px] h-auto max-w-full">
+                </a>
+            </div>
+
+        </div>
+        <nav class="w-full text-black ">
+            <ul class="flex flex-wrap justify-center space-x-8 text-[13.5px] font-medium tracking-[0.2em] uppercase">
+
+                <li class="group relative pb-2 text-[13.5px] leading-[20px] hover:underline">
+                    <a href="#" class="hover: transition-colors">New Arrivals</a>
+                    <ul
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-4">
+                        <li><a href="#" class="block px-6 py-2 hover:text-black text-[10px] hover:underline">New
+                                In</a></li>
+                    </ul>
+                </li>
+
+                <li class="group relative pb-2"><a href="#"
+                        class="hover:text-[13.5px] leading-[20px] hover:underline">women</a>
+                    <ul
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-4">
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">dresses</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">demin</a>
+                        </li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">classics</a>
+                        </li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">separate</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">tops</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">co-ord
+                                set</a></li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">athletic</a>
+                        </li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">jewellery</a>
+                        </li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">beahwears</a>
+                        </li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">accessories</a>
+                        </li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">Swimwear</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">personal
+                                styling</a>
+                        <li><a href="#" class="block px-6 py-2 hover:underline text-black text-[10px]">gift
+                                guide</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="group relative pb-2"><a href="#"
+                        class="hover: transition-colors text-[13.5px] leading-[20px] hover:underline">Dresses</a>
+                    <ul
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-48 bg-white border border-gray-100 shadow-xl  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-4">
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">View
+                                all</a></li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">Midi</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">Maxi</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">prints</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">personal
+                                styling</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="#"
+                        class="hover: transition-colors text-[13.5px] leading-[20px] hover:underline">Swimwear</a></li>
+                <li><a href="#"
+                        class="hover transition-colors text-[13.5px] leading-[20px] hover:underline">classics</a></li>
+                <li><a href="#" class="hover:transition-colors text-[13.5px] leading-[20px] hover:underline">Denim</a>
+                </li>
+                <li><a href="#"
+                        class="hover: transition-colors text-[13.5px] leading-[20px] hover:underline">athletic</a></li>
+                <li class="group relative pb-2"><a href="#"
+                        class="hover: transition-colors text-[13.5px] leading-[20px] hover:underline">curve</a>
+                    <ul
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-4">
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">dresses</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">demin</a>
+                        </li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">separate</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">tops</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">co -ord
+                                set</a></li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">athletic</a>
+                        </li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">accessories</a>
+                        </li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">Swimwear</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">personal
+                                styling</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="group relative pb-2"><a href="#"
+                        class="hover: transition-colors text-[13.5px] leading-[20px] hover:underline">CAMPAIGN</a>
+                    <ul
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-4">
+                        <li><a href="#" class="block px-6 py-2 hover:text-black text-[10px] hover:underline">THE
+                                GOLDEN
+                                HOUR CLUB</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">TORRE
+                                BENNISTRA </a></li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">LIBERTY</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">tops</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">PAISELY
+                                PALACE</a></li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">NEPTUNES'S
+                                KINGDOM</a></li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">personal
+                                styling</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="group relative pb-2"><a href="#"
+                        class="text-[13.5px] hover: transition-colors text-[13.5px] leading-[20px] hover:underline">Sale</a>
+                    <ul
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-48 bg-white border border-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-4">
+                        <li><a href="#" class="block px-6 py-2 hover:underline  hover:text-black text-[10px]">Shop
+                                All
+                                Sale</a></li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">dresses</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">demin</a>
+                        </li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">separate</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:text-black text-[10px]">tops</a>
+                        </li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">athletic</a>
+                        </li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">accessories</a>
+                        </li>
+                        <li><a href="#"
+                                class="block px-6 py-2 hover:underline hover:text-black text-[10px]">Swimwear</a>
+                        </li>
+                        <li><a href="#" class="block px-6 py-2 hover:underline hover:bg-gray-50 text-[10px]">active</a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="w-[70%] mx-auto px-6 mt-8 ">
+        <section class=" mx-auto  px-6 mt-8" id="product_container">
+            <!-- <div class="grid grid-cols-2 gap-20"> -->
+
+                <!-- LEFT: IMAGES -->
+                <!-- <div class="grid grid-cols-2 gap-4">
+                <img src="./image/prd1.jpg" class="w-full object-cover">
+                <img src="./image/prd2.jpg" class="w-full object-cover">
+            </div> -->
+
+                <!-- RIGHT: PRODUCT TEXT -->
+                <!-- <div class="text space-y-4 pr-10">
+                <h1 class="text-2xl font-semibold tracking-wide font-thin text-black">RUGBY JERSEY DRESS IN SPLICED</h1>
+                <p class="text-gray-500 text-sm tracking-widest uppercase">BOHEMIAN TRADERS</p>
+                <p class="text-sm font-semibold">$1,190</p> -->
+
+                <!-- <div class="flex items-center gap-2 text-[12px]"> -->
+                <!-- <span class="text-black">★★★★★</span>
+                    <span class="text-gray-400">(No rating yet)</span>
+                </div>
+                <button class="px-2 text-[10px] py-2 text-white bg-black uppercase">
+                    <a href="">Write a rating</a>
+                </button>
+
+
+                <div class="flex justify-between items-center text-[12px] uppercase tracking-tighter">
+                    <p>Size:</p>
+                    <span><a href="#" class="underline text-[#b5894f] text-[11px]">Size guide</a></span>
+                </div>
+
+                <div class="flex gap-2">
+                    <button
+                        class="border border-gray-300 w-10 h-10 flex items-center justify-center hover:bg-black cursor-pointer hover:text-white transition-colors">0</button>
+                    <button
+                        class="border border-gray-300 w-10 h-10 flex items-center justify-center hover:bg-black cursor-pointer hover:text-white transition-colors">1</button>
+                    <button
+                        class="border border-gray-300 w-10 h-10 flex items-center justify-center hover:bg-black cursor-pointer hover:text-white transition-colors">2</button>
+                </div>
+
+                <div class="pt-4">
+                    <button
+                        class="w-full bg-black text-white py-4 uppercase font-bold tracking-widest cursor-pointer"><a
+                            href="#" id="cartBtn"> Add to cart
+
+                        </a>
+                    </button> -->
+                <!-- <div class="fixed inset-0 bg-black/50 flex items-center justify-center backdrop-blur-sm  z-50 hidden modal" id"cartModalOverlay""> -->
+
+                <!-- Modal -->
+                <!-- <div class="bg-white w-[90%] max-w-7xl rounded-md shadow-lg relative p-6"> -->
+
+                <!-- Close Button -->
+                <!-- <button class="absolute top-4 right-4 text-gray-500 hover:text-black text-xl"><a href="./bohemaintraders.html"></a>
+                                ✕
+                            </button> -->
+
+                <!-- Header -->
+                <!-- <h2 class="text-center text-xl tracking-wide text-gray-600 mb-6">
+                                OK, 1 ITEM WAS ADDED TO YOUR CART. WHAT'S NEXT?
+                            </h2> -->
+
+                <!-- Content -->
+                <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-start"> -->
+
+                <!-- Image -->
+                <!-- <div>
+                                    <img src="./image/prd1.jpg" alt="Product" class="w-full h-auto object-cover" />
+                                </div> -->
+
+                <!-- Product Info -->
+                <!-- <div class="space-y-2">
+                                    <h3 class="text-3xl font-semibold uppercase">
+                                        Paisley Shirt Dress in Royal Blue
+                                    </h3>
+                                    <p class="text-sm text-gray-500 uppercase tracking-wide">
+                                        Bohemian Traders
+                                    </p>
+                                    <p class="text-sm text-gray-600">
+                                        1 × ₦357,643
+                                    </p>
+                                </div> -->
+
+                <!-- Actions -->
+                <!-- <div class="space-y-4 max-w-3xl">
+
+                                    <button
+                                        class="w-full bg-black text-white py-3 text-2xl uppercase tracking-wide hover:bg-gray-800"><a href="./p"> Proceed to Checkout</a>
+                                       
+                                    </button> -->
+
+                <!-- <div class="text-sm text-gray-600">
+                                        <p>Order subtotal</p>
+                                        <p class="text-lg font-bold">₦318,700</p>
+                                        <p class="text-xs mt-1">Your cart contains 1 item</p>
+                                    </div>
+
+                                    <button
+                                        class="w-full border border-black py-3 text-sm uppercase hover:bg-black hover:text-white"><a href="./shop.html">Continue Shopping</a>
+                                        
+                                    </button>
+
+                                    <button class="w-full text-sm text-gray-500 underline">
+                                        View or edit your cart
+                                    </button>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <select class="w-full border border-gray-300 p-3 text-sm bg-white uppercase">
+                        <option value="" class="text-gray-600 hover:bg-gray-300 text-center">Add to wish list</option>
+                        <option value="" class="text-gray-600 hover:bg-gray-300 text-right">View wish list</option>
+                        <option value="" class="text-gray-600 hover:bg-gray-300 text-right">Create new wish list
+                        </option>
+
+                    </select>
+                </div>
+
+
+            </div>
+
+        </div> -->
+                <!-- <div class="mt-16 w-[60%] mb-16">
+
+            <div class="flex gap-10 border-b pb-3 text-sm tracking-wider">
+                <button
+                    class="cursor-pointer hover:underline text-gray-500 hover:text-black active-underline text-[10px]"
+                    id="product_detail">PRODUCT
+                    DETAILS</button>
+                <button
+                    class="cursor-pointer hover:underline text-gray-500 hover:text-black active-underline text-[10px]"
+                    id="product_feature">PRODUCT
+                    FEATURES</button>
+                <button class="cursor-pointer text-gray-500 hover:text-black active-underline text-[10px]"
+                    id="product_sizing">PRODUCT
+                    SIZING</button>
+            </div>
+
+      
+            <div class="mt-6 max-w-3xl text-gray-600 text-[12px] font-medium leading-relaxed product_detail hidden">
+                <p>
+                    A playful take on effortless dressing, the Rugby Jersey Dress blends bold colour-blocking with a
+                    relaxed, easy-wear silhouette. Designed in a soft interlock fabric with comfortable stretch, it
+                    drapes beautifully on the body while maintaining a loose, flattering fit.</p>
+                <br>
+                <p>
+                    Featuring a statement contrast collar with a button placket, grown-on short sleeves, and subtle
+                    side splits, this piece is all about movement and ease. Finished with the Bohemian Traders
+                    embroidered logo on the chest, it's your ultimate throw-on-and-go style—perfect for days when
+                    comfort meets impact.
+                </p>
+                <br>
+                <p> Style tip: wear true to size for its intended relaxed look, or belt it for a more defined shape.
+
+                </p>
+            </div>
+
+            <div class="product_feature mt-6 max-w-3xl text-gray-600 text-[12px] font-medium leading-relaxed hidden">
+                <p> - Intended for a loose fit</p>
+                <br>
+
+                <p> - Midi length</p>
+                <br>
+
+                <p> - Classic large contrast collar with button placket</p>
+                <br>
+
+                <p> - Grown on short sleeves</p>
+                <br>
+
+                <p> - Side split</p>
+                <br>
+
+                <p> - Bohemian Traders embroidered logo on the chest</p>
+                <br>
+
+                <p> - Easy thrown on</p>
+                <br>
+
+                <p> - Soft spliced interlock fabric</p>
+                <br>
+
+                <p> - 60% Rayon 35% Nylon 5% Spandex</p>
+                <br>
+
+                <p> - Mid-weight, stretchy fabric</p>
+                <br>
+
+                <p> - Cold hand wash</p>
+                <br>
+            </div>
+
+            <div class="product_sizing mt-6 max-w-3xl text-gray-600 text-[12px] font-medium leading-relaxed hidden">
+                <h1>MODEL SIZING</h1>
+                <br>
+
+                <p> - Charlotte's height is 175cm, 76cm bust, 59cm waist, 86cm hip, size 6/8 and wears a size 0</p>
+                <br>
+
+                <p> - Mariangel's height is 178cm, 81cm bust, 69cm waist, 92cm hip, size 8 and wears a size 0</p>
+                <br>
+
+                <p>- Mahalia height is 173cm, size 16/18 and wears a size 1</p>
+                <br>
+                <img src="./image/BT-DRE00618.webp" alt="">
+
+                <div>
+                </div>
+            </div>
+        </div> -->
+
+        </section>
+        <div id="toast-container" class="fixed top-5 right-5 z-[100] flex flex-col gap-3"></div>
+
+        <div>
+            <h2 class="text-4xl text-[#272727] font-thin mt-8 ">You might also like</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 mt-12 mb-20 gap-6">
+                <div>
+                    <div class="relative group cursor-pointer max-w-7xl overflow-hidden aspect-[3/4]">
+                        <img src="./image/4th cart.1.jpg" alt="" class="w-full object-cover">
+
+                        <div
+                            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-none z-10 ">
+                            <img src="./image/modal4.jpg" alt="">
+                        </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-none z-20 ">
+                            <h3
+                                class="text-black text-[13px] tracking-[0.25em] uppercase font-medium bg-gray-200 border border-white/20 py-[12px] px-[20px]">
+                                quick View</h3>
+                            <div
+                                class="absolute  bottom-2 left-0 right-0  bg-[#dododo] text-white py-2 opacity-0 group-hover:opacity-100 py-4 ">
+                                <span class="mx-1">6</span>
+                                <span class="mx-1">8</span>
+                                <span class="mx-1">10</span>
+                                <span class="mx-1">12</span>
+                                <span class="mx-1">14</span>
+                                <span class="mx-1">16</span>
+                                <span class="mx-1">18</span>
+                                <span class="mx-1">20</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="mt-4 text-[#272727] ">
+                        <h2 class="mt- bg-gray-200 text-[10px] w-20 py-1">NATURAL FIBRE</h2>
+                        <h4 class="text-[12px] uppercase tracking-wider text-[#272727] text-[10px] font-semibold">
+                            Tie
+                            waist maxi dress in blue</h4>
+                        <div class="mt-1 flex gap-2 font-medium">
+                            <span class="text-[#272727 text-[10px] text-[10px] font-semibold">AED 1,360.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="relative group cursor-pointer overflow-hidden aspect-[3/4]">
+                        <img src="./image/od4`.jpg" alt="" class="w-full object-cover">
+
+                        <div
+                            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-none z-10 ">
+                            <img src="./image/od3.jpg" alt="" class="w-full object-cover">
+                        </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-none z-20 ">
+                            <h3
+                                class="text-black text-[13px] tracking-[0.25em] uppercase font-medium bg-gray-200 border border-white/20 py-[12px] px-[20px]">
+                                quick View</h3>
+                            <div
+                                class="absolute  bottom-2 left-0 right-0  bg-[#dododo] text-white py-2 opacity-0 group-hover:opacity-100 py-4 ">
+                                <span class="mx-1">6</span>
+                                <span class="mx-1">8</span>
+                                <span class="mx-1">10</span>
+                                <span class="mx-1">12</span>
+                                <span class="mx-1">14</span>
+                                <span class="mx-1">16</span>
+                                <span class="mx-1">18</span>
+                                <span class="mx-1">20</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="mt-4 text-[#272727] ">
+                        <h2 class="mt- bg-gray-200 text-[10px] w-20 py-1">NATURAL FIBRE</h2>
+                        <h4 class="text-[12px] uppercase tracking-wider text-[#272727] text-[10px] font-semibold">
+                            Fruito
+                            yolk blouse in yellow</h4>
+                        <div class="mt-1 flex gap-2 font-medium">
+                            <span class="text-[#272727 text-[10px] text-[10px] font-semibold">₦189,800</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="relative group cursor-pointer overflow-hidden aspect-[3/4]">
+                        <img src="./image/product3.jpg" alt="" class="w-full object-cover">
+
+                        <div
+                            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-none z-10 ">
+                            <img src="./image/od33.jpg" alt="" class="w-full object-cover">
+                        </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-none z-20 ">
+                            <h3
+                                class="text-black text-[13px] tracking-[0.25em] uppercase font-medium bg-gray-200 border border-white/20 py-[12px] px-[20px]">
+                                quick View</h3>
+                            <div
+                                class="absolute  bottom-2 left-0 right-0  bg-[#dododo] text-white py-2 opacity-0 group-hover:opacity-100 py-4 ">
+                                <span class="mx-1">6</span>
+                                <span class="mx-1">8</span>
+                                <span class="mx-1">10</span>
+                                <span class="mx-1">12</span>
+                                <span class="mx-1">14</span>
+                                <span class="mx-1">16</span>
+                                <span class="mx-1">18</span>
+                                <span class="mx-1">20</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="mt-4 text-[#272727] ">
+                        <h2 class="mt- bg-gray-200 text-[10px] w-20 py-1">NATURAL FIBRE</h2>
+                        <h4 class="text-[12px] uppercase tracking-wider text-[#272727] text-[10px] font-semibold">
+                            Fruito
+                            Bib
+                            Smock Dress in Blush</h4>
+                        <div class="mt-1 flex gap-2 font-medium">
+                            <span class="text-[#272727 text-[10px] text-[10px] font-semibold">₦189,800</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="relative group cursor-pointer overflow-hidden aspect-[3/4]">
+                        <img src="./image/1_front_etch__15523.jpg" alt="" class="w-full object-cover">
+
+                        <div
+                            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-none z-10 ">
+                            <img src="./image/1_campaign.jpg" alt="" class="w-full object-cover">
+                        </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-none z-20 ">
+                            <h3
+                                class="text-black text-[13px] tracking-[0.25em] uppercase font-medium bg-gray-200 border border-white/20 py-[12px] px-[20px]">
+                                quick View</h3>
+                            <div
+                                class="absolute  bottom-2 left-0 right-0  bg-[#dododo] text-white py-2 opacity-0 group-hover:opacity-100 py-4 ">
+                                <span class="mx-1">6</span>
+                                <span class="mx-1">8</span>
+                                <span class="mx-1">10</span>
+                                <span class="mx-1">12</span>
+                                <span class="mx-1">14</span>
+                                <span class="mx-1">16</span>
+                                <span class="mx-1">18</span>
+                                <span class="mx-1">20</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="mt-4 text-[#272727] ">
+                        <h2 class="mt- bg-gray-200 text-[10px] w-20 py-1">NATURAL FIBRE</h2>
+                        <h4 class="text-[12px] uppercase tracking-wider text-[#272727] text-[10px] font-semibold">
+                            Fruito
+                            Bib
+                            Smock Dress in Blush</h4>
+                        <div class="mt-1 flex gap-2 font-medium">
+                            <p class="text-[#272727] line-through text-[10px] font-semibold">₦316,300</p>
+                            <span class="text-[#272727 text-[10px] text-[10px] font-semibold">₦189,800</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Footer -->
+    <footer class="w-full bg-[#1a1a1a] py-12 px-6">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-start">
+
+            <div class="space-y-6">
+                <img src="./image/logo.webp" alt="Logo"
+                    class="w-[250px] md:w-[300px] h-auto max-w-full invert cursor-pointer">
+                <ul class="flex gap-4">
+                    <li><a href="#"><img src="./image/instagram (1).png" alt="Instagram" class="w-6 h-6 invert"></a>
+                    </li>
+                    <li><a href="#"><img src="./image/facebook (1).png" alt="Facebook" class="w-6 h-6 invert"></a></li>
+                    <li><a href="#"><img src="./image/pinterest-sign.png" alt="Pinterest" class="w-6 h-6 invert"></a>
+                    </li>
+                    <li><a href="#"><img src="./image/tik-tok.png" alt="TikTok" class="w-6 h-6 invert"></a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-sm font-bold text-[#f5f5f5] mb-6 tracking-widest">INFO</h2>
+                <ul class="space-y-3 text-xs text-[#f5f5f5] uppercase tracking-wider">
+                    <li><a href="#" class="hover:underline font-semibold text-[10px]">Journal</a></li>
+                    <li><a href="#" class="hover:underline font-semibold text-[10px]">About Us</a></li>
+                    <li><a href="#" class="hover:underline font-semibold text-[10px]">Contact Us</a></li>
+                    <li><a href="#" class="hover:underline font-semibold text-[10px]">Work With Us</a></li>
+                    <li><a href="#" class="hover:underline font-semibold text-[10px]">Ts & Cs</a></li>
+                    <li><a href="#" class="hover:underline font-semibold text-[10px]">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:underline font-semibold text-[10px]">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-sm font-bold text-[#f5f5f5] mb-6 tracking-widest">CUSTOMER CARE</h2>
+                <ul class="space-y-3 text-xs text-[#f5f5f5] uppercase tracking-wider">
+                    <li><a href="#" class="hover:underline font-semibold text-[10px]">Shipping</a></li>
+                    <li><a href="#" class="hover:underline font-semibold text-[10px]">Returns</a></li>
+                    <li><a href="#" class="hover:underline font-semibold text-[10px]">Inclusive Sizing</a></li>
+                    <li><a href="#" class="hover:underline font-semibold text-[10px]">Payment Methods</a></li>
+                    <li><a href="#" class="hover:underline font-semibold text-[10px]">Outlet</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <p class="text-[13px] text-[#f5f5f5] leading-[1.62px]">To Receive Updates And Special Offers!
+                </p>
+                <div class="flex flex-col gap-3">
+                    <div>
+                        <input type="email" placeholder="YOUR EMAIL ADDRESS"
+                            class="bg-transparent border-b border-gray-600 py-2 text-xs text-white focus:outline-none focus:border-white border-white transition">
+                        <button class="text-[#707070] py-3 text-xs font-bold tracking-widest cursor-pointer">
+                            SUBSCRIBE
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="text-white flex flex-col  w-full">
+                <p class="text-sm font-light text-[#f5f5f5] text-[9px] mb-6 tracking-widest">
+                    CUSTOMERSERVICE@BOHEMIANTRADERS.COM | +61 2 4327 8640 | MON - FRI | 9AM - 5PM AEST</p>
+            </div>
+
+        </div>
+    </footer>
+    <div class="fixed bottom-6 right-6 flex flex-col items-center space-y-3 z-50">
+
+        <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="opacity-0 invisible transition-all duration-500 bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-500 w-10 h-10 rounded-full flex items-center justify-center shadow-sm hover:bg-black hover:text-white hover:-translate-y-1">
+            <i class="ri-arrow-up-s-line text-2xl"></i>
+        </button>
+
+        <a href="#"
+            class="bg-gray-200 backdrop-blur-sm border border-gray-200 text-gray-800 w-14 h-14 rounded-full flex items-center justify-center shadow-md hover:shadow-xl transition-all hover:-translate-y-1 group">
+            <img src="./image/typing.png" alt="">
+        </a>
+    </div>
+</body>
+<script src="./product.js"></script>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product | Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex h-screen overflow-hidden">
+
+        <aside class="w-64 bg-blue-950 text-[#dedede] flex flex-col h-screen sticky top-0">
+            <div class="p-6 text-2xl font-bold border-b border-gray-700">
+                Admin.
+            </div>
+            <nav class="flex-1 p-4 space-y-3 overflow-y-auto">
+                <a href="./dashboard.html" class="flex items-center gap-3 py-2 px-3 bg-blue-900 rounded-lg">📊
+                    Dashboard</a>
+                <a href="./view_category.html"
+                    class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">🈯 Category</a>
+                <a href="./view_product.html"
+                    class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">🛒 Products</a>
+                <a href="./users.html"
+                    class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">👥 Users</a>
+                <a href="./cart.html" class="flex items-center gap-3 py-2 px-3 bg-blue-900 rounded-lg">🛍️ My Cart</a>
+                <a href="./create_product.html"
+                    class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">➕ Create
+                    Product</a>
+                <a href="./creat_users.html"
+                    class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">➕ Create User</a>
+                <a href="./create_category.html"
+                    class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">➕ Create
+                    Category</a>
+            </nav>
+            <div class="p-4 border-t border-gray-700 text-sm flex flex-col gap-2">
+                <button id="logout_btn_sidebar"
+                    class="w-full py-2 rounded bg-red-600 text-white hover:bg-red-700 transition cursor-pointer">
+                    Logout
+                </button>
+                <p class="text-xs text-gray-400 text-center">&copy; 2026 Rework Admin</p>
+            </div>
+        </aside>
+
+        <div class="flex-1 flex flex-col overflow-y-auto">
+
+            <header class="flex justify-between items-center p-5 bg-white shadow-sm sticky top-0 z-10">
+                <h1 class="text-xl font-semibold text-gray-800 tracking-tight">Management</h1>
+
+                <div class="relative">
+                    <button class="flex items-center gap-2 cursor-pointer" id="dropdown_btn">
+                        <span
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-800 font-bold">👤</span>
+                        <h4 class="font-light text-sm">Admin</h4>
+                    </button>
+                </div>
+            </header>
+
+            <main class="flex-1 flex items-center justify-center p-10 bg-gray-50/50">
+                <div class="bg-white shadow-sm border border-gray-100 rounded-2xl p-8 w-full max-w-xl">
+                    <div class="mb-8 text-center">
+                        <h2 class="text-2xl font-semibold text-gray-800">Create New Product</h2>
+                    </div>
+
+                    <form id="ProductForm" class="space-y-5">
+                        <div class="grid grid-cols-1 gap-5">
+                            <div>
+                                <label
+                                    class="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">Product
+                                    Title</label>
+                                <input type="text" id="title"
+                                    class="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm ">
+                            </div>
+
+                            <div>
+                                <label
+                                    class="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">Description</label>
+                                <textarea id="descp" rows="4"
+                                    class="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm "></textarea>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label
+                                        class="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">Price
+                                        (₦)</label>
+                                    <input type="number" id="price"
+                                        class="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm outline-none">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">Quantity</label>
+                                    <input type="number" id="quantity"
+                                        class="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm outline-none">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    class="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">Image
+                                    URL</label>
+                                <input type="text" id="image"
+                                    class="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm outline-none">
+                            </div>
+
+                            <div>
+                                <label
+                                    class="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">Category</label>
+                                <select id="category_id"
+                                    class="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm outline-none bg-white cursor-pointer">
+                                    <option value="">Select Category</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button id="create_btn"
+                            class="w-full bg-black text-white py-4 rounded-xl text-xs font-bold uppercase tracking-[0.2em] hover:bg-gray-800 transition-all duration-300 shadow-lg shadow-gray-200 cursor-pointer mt-4">
+                            Create Product
+                        </button>
+                    </form>
+
+                    <div id="message"
+                        class="mt-6 text-center text-[10px] uppercase tracking-widest text-gray-500 font-medium"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+<script src="./create_product.js"></script>
+
+</html>

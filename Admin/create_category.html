@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product Category</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .slidebar {
+            height: calc(100vh - 64px);
+            position: sticky;
+            top: 64px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-gray-100 flex h-screen">
+        <!-- sidebar -->
+        <section class="w-64 bg-blue-950 text-[#dedede] flex flex-col sticky top-10 self-start h-screen">
+
+            
+            <aside class="w-64 bg-blue-950 text-[#dedede] flex flex-col h-screen sticky top-0">
+                <div class="p-6 text-2xl font-bold border-b border-gray-700">Admin.</div>
+                <nav class="flex-1 p-4 space-y-3 overflow-y-auto">
+                    <a href="./dashboard.html" class="flex items-center gap-3 py-2 px-3 bg-blue-900 rounded-lg">📊
+                        Dashboard</a>
+                    <a href="./view_category.html"
+                        class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">🈯
+                        Category</a>
+                    <a href="./view_product.html"
+                        class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">🛒
+                        Products</a>
+                    <a href="./users.html"
+                        class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">👥 Users</a>
+                    <a href="./cart.html" class="flex items-center gap-3 py-2 px-3 bg-blue-900 rounded-lg">🛍️ My
+                        Cart</a>
+                    <a href="./create_product.html"
+                        class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">➕ Create
+                        Product</a>
+                    <a href="./creat_users.html"
+                        class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">➕ Create
+                        User</a>
+                    <a href="./create_category.html"
+                        class="flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-blue-900 transition">➕ Create
+                        Category</a>
+                </nav>
+                <div class="p-4 border-t border-gray-700 text-sm">
+                    <button onclick="localStorage.clear(); location.reload();"
+                        class="w-full py-2 rounded bg-red-600 text-white hover:bg-red-700 transition cursor-pointer"><a
+                            href="./merchant.html">Logout</a></button>
+                </div>
+            </aside>
+
+        </section>
+
+        <div class="flex-1 flex flex-col">
+            <header class="flex justify-between items-center p-5 bg-white shadow">
+                <h1 class="text-xl font-semibold text-gray-800">Dashboard</h1>
+                <div class="relative">
+                    <button class="flex items-center gap-2" id="dropdown_btn">
+                        <span
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-800 font-bold"><a href="./merchant.html">👤</a></span>
+                        <h4 class="font-light text-sm">Admin<span class="text-gray-700" id="merchant_name"></span>
+                        </h4>
+                    </button>
+                    <div id="dropdown"
+                        class="hidden absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg z-50">
+                        <!-- <div class="px-4 py-4 text-sm text-gray-700 space-y-4 shadow-md">
+                            <p class="font-bold text-sm">Name: <span id="merc_fullname" class="font-light"></span></p>
+                            <p class="font-bold text sm">Email: <span id="merc_email" class="font-light"></span></p>
+                            <p class="font-bold text-sm">Store Name: <span id="merc_store" class="font-light"></span>
+                            </p>
+                        </div> -->
+                        <div class="border-t">
+                            <button id="logout_btn_sidebar"
+                                class="w-full px-4 py-2 text-left text-sm text-red-500 hover:bg-gray-100"><a href="./merchant.html">Logout</a></button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="bg-gray-100 flex items-center justify-center my-10">
+                <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-xl">
+                    <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Create New Product</h2>
+
+                    <form id="ProductForm" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Categoty Title</label>
+                            <input type="text" id="title" class="mt-1 w-full px-3 py-2 border rounded-sm shadow-sm">
+                        </div>
+                        <button id="create_btn"
+                            class="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition cursor-pointer">
+                            Create Product Category
+                        </button>
+                    </form>
+
+                    <div id="message" class="mt-4 text-center text-sm text-gray-700"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="./created_product_category.js"></script>
+
+</html>
