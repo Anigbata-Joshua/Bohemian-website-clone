@@ -37,7 +37,6 @@ function loadCategories() {
         });
 }
 
-// Handle Product Creation
 productForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -65,7 +64,7 @@ productForm.addEventListener("submit", (e) => {
         quantity: Number(quantity),
         images: image,
         category_id: category_id,
-        currency: "NGN" //Api standard 
+        currency: "NGN" 
     };
 
     messageBox.innerText = "Creating product...";
@@ -81,6 +80,7 @@ productForm.addEventListener("submit", (e) => {
             console.log("Success:", data);
             messageBox.innerText = "Product Created Successfully!";
             messageBox.style.color = "green";
+
             productForm.reset();
         })
         .catch(err => {
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadCategories();
 
     // Optional: Show merchant name in header if stored
-    let merchantName = localStorage.getItem("merchant_name");
+    let merchantName = localStorage.getItem("first_name");
     if (merchantName) {
         document.getElementById("merchant_name").innerText = merchantName;
     }

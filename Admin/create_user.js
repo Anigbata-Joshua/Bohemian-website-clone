@@ -1,5 +1,7 @@
 let base_url = "http://ecommerce.reworkstaging.name.ng/v2";
 let errorMessage = document.getElementById("message");
+let merchantId = localStorage.getItem("merchant_id") 
+
 
 let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 let passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
@@ -21,16 +23,15 @@ document.getElementById("register_btn").addEventListener('click', (e) => {
 
     if (!emailRegex.test(email)) {
         errorMessage.innerText = "Please enter a valid email address.";
+        errorMessage.style.color ="red"
         return;
     }
 
-    // API Format (Matches your documentation)
     let apiFormat = {
         first_name: firstName,
         last_name: lastName,
         email: email,
         phone: phone,
-        phones: [phone],
         password: password
     };
 
@@ -42,9 +43,8 @@ document.getElementById("register_btn").addEventListener('click', (e) => {
         .then((res) => res.json())
         .then((data) => {
             if (data.id) {
-                // SUCCESS: Prepare data for the Dashboard
                 let userAccount = {
-                    id: data.id,
+                    id: merchantId,
                     first_name: firstName,
                     last_name: lastName,
                     email: email,
@@ -62,10 +62,11 @@ document.getElementById("register_btn").addEventListener('click', (e) => {
                 }, 1500);
             } else {
                 errorMessage.innerText = data.msg || "Registration failed. Try a different email.";
+                errorMessage.style.color = "red"
             }
         })
         .catch((err) => {
             errorMessage.innerText = "Server error. Please try again.";
-            console.error(err);
+            console.error("server error", err);
         });
 });

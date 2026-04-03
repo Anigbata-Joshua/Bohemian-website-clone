@@ -60,19 +60,19 @@ document.getElementById("create_acc_btn").addEventListener('click', (e) => {
                     store_name: storeName
                 };
 
-                // Save to LocalStorage (Dashboard reads the "merchant" key)
+                // Save to LocalStorage 
                 localStorage.setItem("merchant", JSON.stringify(merchantAccount));
                 localStorage.setItem("merchant_id", data.id);
-                localStorage.setItem("store_name")
+                localStorage.setItem("store_name", storeName)
 
                 errorMessage.style.color = "green";
                 errorMessage.innerText = "Account Created! Redirecting to Dashboard...";
 
-                // Redirect to Admin Dashboard
                 setTimeout(() => {
-                    window.location.href = "dashboard.html";
+                    window.location.href = "login.html";
                 }, 1500);
             } else {
+                errorMessage.style.color ="red"
                 errorMessage.innerText = data.msg || "Registration failed. Try a different email.";
             }
         })

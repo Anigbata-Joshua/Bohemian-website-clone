@@ -19,7 +19,7 @@ createBtn.addEventListener("click", (e) => {
     }
 
     if (!merchantId) {
-        catMessage.innerText = "Error: Merchant ID missing. Please log in.";
+        catMessage.innerText = "Error: Merchant ID missing. Please log in first.";
         catMessage.style.color = "red";
         return;
     }
@@ -28,13 +28,13 @@ createBtn.addEventListener("click", (e) => {
     let apiFormat = {
         name: categoryName,
         merchant_id: merchantId,
-        image: "https://via.placeholder.com/150" 
+        image: ""
     };
 
     createBtn.innerText = "Creating...";
     createBtn.disabled = true;
 
-    // Fetching data from Api
+    // Fetch
     fetch(`${base_url}/categories`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -42,13 +42,15 @@ createBtn.addEventListener("click", (e) => {
     })
         .then((res) => res.json())
         .then((data) => {
-            createBtn.innerText = "Create Product Category";
-            createBtn.disabled = false;
 
             if (data.id || data._id) {
-                catMessage.innerText = "Category created successfully!";
+                catMessage.innerText = "Category created successfully!.... REDIRECTING";
                 catMessage.style.color = "green";
-                catTitleInput.value = ""; 
+                catTitleInput.value = "";
+                
+                // setTimeout(() => {
+                //     window.location.href = "view_category.html"
+                // }, 7000)
                 console.log("Success:", data);
             } else {
                 catMessage.innerText = data.msg || "Failed to create category";

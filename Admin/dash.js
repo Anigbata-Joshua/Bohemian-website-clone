@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         fetch(`${base_url}/products?merchant_id=${merchant_id}`)
             .then(response => {
-                if (!response.ok) throw new Error("Network response was not ok");
                 return response.json();
             })
             .then(data => {
@@ -26,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <tr class="hover:bg-gray-50 transition-colors border-b border-gray-100 text-xs">
                         <td class="p-3 font-medium uppercase tracking-widest">${product.title}</td>
                         <td class="p-3 text-center">
-                            <img src="${product.image}" class="h-12 w-12 object-cover mx-auto rounded shadow-sm" onerror="this.src='https://via.placeholder.com/150'"/>
+                            <img src="${product.image}" class="h-12 w-12 object-cover mx-auto rounded shadow-sm" />
                         </td>
                         <td class="p-3 font-semibold text-stone-800">₦${product.price}</td>
                         <td class="p-3 text-[10px] font-bold text-gray-400 uppercase tracking-widest">${product.category_id || 'Generic'}</td>

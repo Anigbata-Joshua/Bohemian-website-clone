@@ -8,7 +8,7 @@ function ViewCategory() {
         .then((data) => {
             let content = "";
 
-            if (!data || data.length === 0) {
+            if (!data || data.length == 0) {
                 table_category_container.innerHTML = `<tr><td colspan="2" class="px-6 py-4 text-center text-gray-400">No categories found.</td></tr>`;
                 return;
             }
