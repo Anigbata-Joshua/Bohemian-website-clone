@@ -3,13 +3,13 @@ let merchantId = localStorage.getItem("merchant_id");
 
 function getUsers() {
     let usersContainer = document.getElementById("users_container");
-    let messageBox = document.getElementById("message");
+    // let messageBox = document.getElementById("message");
     let content = "";
 
     fetch(`${base_url}/users?merchant_id=${merchantId}`)
         .then(res => res.json())
         .then(response => {
-            console.log("Api raw response:", response);
+            console.log("Users from api:", response);
 
             let usersList = Array.isArray(response) ? response : (response.data || []);
 
@@ -42,18 +42,19 @@ function getUsers() {
                 `;
             });
             usersContainer.innerHTML = content;
-
+            
         }).catch((err) => {
             console.log("Fetch error:", err);
-            if(messageBox) messageBox.innerText = "Could not connect to user database.";
+            // if(messageBox) messageBox.innerText = "Could not connect to user database.";
         });
+        
 }
-
-document.addEventListener("DOMContentLoaded", getUsers);
+getUsers();
 
 function deleteUser(id) {
-    if(confirm("Permanently remove this user?")) {
-        fetch(`${base_url}/users/${id}`, { method: 'DELETE' })
-            .then(() => getUsers()); 
+    if(ask= confirm("Permanently remove this user?")) { 
+        if(ask){
+            alert("deleted")
+        }
     }
 }

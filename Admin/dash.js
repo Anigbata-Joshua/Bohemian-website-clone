@@ -15,13 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 return response.json();
             })
             .then(data => {
-                let products = Array.isArray(data) ? data : (data.data || []);
-    
-                
-                // Update Total Count
-                if (totalProducts) totalProducts.textContent = products.length;
+                let productsAdded = data.data || [];
 
-                let view = products.map(product => `
+                totalProducts.innerHTML = productsAdded.length;
+
+               let table_view = productsAdded.map(product => `
                     <tr class="hover:bg-gray-50 transition-colors border-b border-gray-100 text-xs">
                         <td class="p-3 font-medium uppercase tracking-widest">${product.title}</td>
                         <td class="p-3 text-center">
@@ -30,43 +28,43 @@ document.addEventListener("DOMContentLoaded", () => {
                         <td class="p-3 font-semibold text-stone-800">₦${product.price}</td>
                         <td class="p-3 text-[10px] font-bold text-gray-400 uppercase tracking-widest">${product.category_id || 'Generic'}</td>
                     </tr>
-                `).join('');
+                `);
 
-                if (table_data) table_data.innerHTML = view || '<tr><td colspan="4" class="p-10 text-center">No products.</td></tr>';
+                if (table_data) table_data.innerHTML =table_view || '<tr><td colspan="4" class="p-10 text-center">No products.</td></tr>';
             })
             .catch(err => console.error("Product Fetch Error:", err));
     }
 
     function get_total_users() {
-        let total_users_el = document.getElementById("total_users");
-        if (!total_users_el) return;
+        let total_users = document.getElementById("total_users");
+        if (!total_users) return;
 
         fetch(`${base_url}/users`)
             .then(response => response.json())
             .then(data => {
-                let users = Array.isArray(data) ? data : (data.data || []);
-                total_users_el.textContent = users.length;
+                // let users = Array.isArray(data) ? data : (data.data || []);
+                total_users.innerHTML = data.length;
             })
             .catch(err => console.error("User Fetch Error:", err));
     }
+
     function get_total_cart_products() {
-        let total_cart_el = document.getElementById("bohemian_cart");
-        if (!total_cart_el) return;
+        let total_cart = document.getElementById("bohemian_cart");
+        if (!total_cart) return;
 
         let cartData = localStorage.getItem("bohemian_cart");
-        
+
         if (!cartData) {
-            total_cart_el.textContent = "0";
+            total_cart.textContent = "0";
             return;
         }
 
         let products = JSON.parse(cartData);
         let totalQuantity = products.reduce((acc, item) => acc + (Number(item.quantity) || 1), 0);
-        
-        total_cart_el.textContent = totalQuantity;
+
+        total_cart.textContent = totalQuantity;
     }
 
-    // --- Initial Execution ---
     loadProducts();
     get_total_users();
     get_total_cart_products();
