@@ -48,9 +48,9 @@ createBtn.addEventListener("click", (e) => {
                 catMessage.style.color = "green";
                 catTitleInput.value = "";
                 
-                // setTimeout(() => {
-                //     window.location.href = "view_category.html"
-                // }, 7000)
+                setTimeout(() => {
+                    window.location.href = "view_category.html"
+                }, 3000)
                 console.log("Success:", data);
             } else {
                 catMessage.innerText = data.msg || "Failed to create category";

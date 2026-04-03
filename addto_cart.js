@@ -106,8 +106,6 @@ function displayCart() {
 }
 displayCart();
 
-// document.addEventListener("DOMContentLoaded", displayCart);
-
 function increaseQty(id) {
     let items = localStorage.getItem("bohemian_cart");
     if (!items) return;

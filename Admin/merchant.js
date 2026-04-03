@@ -66,7 +66,7 @@ document.getElementById("create_acc_btn").addEventListener('click', (e) => {
                 localStorage.setItem("store_name", storeName)
 
                 errorMessage.style.color = "green";
-                errorMessage.innerText = "Account Created! Redirecting to Dashboard...";
+                errorMessage.innerText = "Account Created! Redirecting to Login...";
 
                 setTimeout(() => {
                     window.location.href = "login.html";

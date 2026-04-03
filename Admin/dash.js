@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let totalProducts = document.getElementById("total_products");
         let table_data = document.getElementById("table_data");
         let merchant_id = merchantData?.id;
-        // let category_id = category_id?.id
+
 
         if (!merchant_id) return;
 
