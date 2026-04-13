@@ -15,22 +15,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 return response.json();
             })
             .then(data => {
-                let productsAdded = data.data || [];
+                let productsAdded = data.data;
 
                 totalProducts.innerHTML = productsAdded.length;
 
-               let table_view = productsAdded.map(product => `
+                let table_view = productsAdded.map(product => `
                     <tr class="hover:bg-gray-50 transition-colors border-b border-gray-100 text-xs">
                         <td class="p-3 font-medium uppercase tracking-widest">${product.title}</td>
                         <td class="p-3 text-center">
                             <img src="${product.image}" class="h-12 w-12 object-cover mx-auto rounded shadow-sm" />
                         </td>
                         <td class="p-3 font-semibold text-stone-800">₦${product.price}</td>
-                        <td class="p-3 text-[10px] font-bold text-gray-400 uppercase tracking-widest">${product.category_id || 'Generic'}</td>
+                        <td class="p-3 text-[10px] font-bold text-gray-700 uppercase tracking-widest">${product.category.name}</td>
                     </tr>
                 `);
 
-                if (table_data) table_data.innerHTML =table_view || '<tr><td colspan="4" class="p-10 text-center">No products.</td></tr>';
+                if (table_data) table_data.innerHTML = table_view || '<tr><td colspan="4" class="p-10 text-center">No products.</td></tr>';
+                console.log(data)
             })
             .catch(err => console.error("Product Fetch Error:", err));
     }
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch(`${base_url}/users`)
             .then(response => response.json())
             .then(data => {
-                // let users = Array.isArray(data) ? data : (data.data || []);
+
                 total_users.innerHTML = data.length;
             })
             .catch(err => console.error("User Fetch Error:", err));
@@ -55,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let cartData = localStorage.getItem("bohemian_cart");
 
         if (!cartData) {
-            total_cart.textContent = "0";
+            total_cart.textContent = "";
             return;
         }
 

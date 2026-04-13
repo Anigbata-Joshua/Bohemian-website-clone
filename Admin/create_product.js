@@ -19,7 +19,7 @@ function loadCategories() {
 
             if (data && data.length > 0) {
                 data.forEach(cat => {
-                    let option = document.createElement("option");//This is from the slect opt in html
+                    let option = document.createElement("option");//This is from the select opt in html
                     option.value = cat.id; // The ID sent to the product API
                     option.textContent = cat.name.toUpperCase();
                     categorySelect.appendChild(option);
