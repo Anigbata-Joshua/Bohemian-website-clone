@@ -1,3 +1,12 @@
+// Update cart count in the navigation
+function updateCartCount() {
+    const cartCountElement = document.getElementById("cart_count");
+    if (!cartCountElement) return;
+    
+    const cart = JSON.parse(localStorage.getItem("bohemian_cart")) || [];
+    cartCountElement.textContent = cart.length;
+}
+
 function displayCart() {
     let tableContainer = document.getElementById("table_container");
     let fromLocalStorage = localStorage.getItem("bohemian_cart");
@@ -103,6 +112,9 @@ function displayCart() {
             removeItem(btn.id);
         });
     });
+    
+    // Update cart count in navigation
+    updateCartCount();
 }
 displayCart();
 
@@ -120,6 +132,7 @@ function increaseQty(id) {
     });
 
     localStorage.setItem("bohemian_cart", JSON.stringify(cart_product));
+    updateCartCount();
     displayCart(); 
 }
 
@@ -140,6 +153,7 @@ function decreaseQty(id) {
     });
 
     localStorage.setItem("bohemian_cart", JSON.stringify(cart_product));
+    updateCartCount();
     displayCart(); 
 }
 
@@ -153,6 +167,7 @@ function removeItem(id) {
         let cart_product = products.filter((p) => p.id != id);
 
         localStorage.setItem("bohemian_cart", JSON.stringify(cart_product));
+        updateCartCount();
         displayCart(); 
     }
 }

@@ -3,6 +3,18 @@ const productId = urlParams.get("product_id");
 const product_container = document.getElementById("product_container");
 const base_url = "http://ecommerce.reworkstaging.name.ng/v2";
 
+// Update cart count in the navigation
+function updateCartCount() {
+    const cartCountElement = document.getElementById("cart_count");
+    if (!cartCountElement) return;
+    
+    const cart = JSON.parse(localStorage.getItem("bohemian_cart")) || [];
+    cartCountElement.textContent = cart.length;
+}
+
+// Initialize cart count on page load
+document.addEventListener("DOMContentLoaded", updateCartCount);
+
 function getProduct() {
     if (!productId) return;
 
@@ -308,4 +320,5 @@ function saveToLocalStorage(product, image) {
 
     // 4. Always save the final state of the cart
     localStorage.setItem("bohemian_cart", JSON.stringify(cart));
+    updateCartCount();
 }

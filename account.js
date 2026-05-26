@@ -1,6 +1,18 @@
 let base_url = "http://ecommerce.reworkstaging.name.ng/v2";
 let merchantId = localStorage.getItem("merchant_id");
 
+// Update cart count in the navigation
+function updateCartCount() {
+    const cartCountElement = document.getElementById("cart_count");
+    if (!cartCountElement) return;
+    
+    const cart = JSON.parse(localStorage.getItem("bohemian_cart")) || [];
+    cartCountElement.textContent = cart.length;
+}
+
+// Initialize cart count on page load
+document.addEventListener("DOMContentLoaded", updateCartCount);
+
 // 1. SELECTORS - Using "let" so we can check if they exist
 let closeBtn = document.getElementById("close_btn");
 let logInBtn = document.getElementById("login_btn"); // Make sure this ID matches your HTML button
@@ -54,7 +66,7 @@ if (regBtn) {
 
         // Safety Check: Do inputs exist?
         if (!reg_name || !reg_mail || !createPassword || !confirmPassword) {
-            console.error("Registration inputs missing from HTML");
+            console.error("Registration some inputs missing");
             return;
         }
 

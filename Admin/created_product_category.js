@@ -1,5 +1,5 @@
 let base_url = "http://ecommerce.reworkstaging.name.ng/v2";
-let merchantId = localStorage.getItem("merchant_id") || "69ca2b341595cbe8104585f5";
+let merchantId = localStorage.getItem("merchant_id");
 
 // Input IDs
 let catMessage = document.getElementById("message");

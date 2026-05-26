@@ -40,12 +40,12 @@
                     <i class="ri-heart-3-line"></i>
                 </a>
 
-                <a href="./cart.html"
+                <a href="./addto_cart.html"
                     class="hover:text-black transition-colors relative w-[22px] flex items-center justify-center">
                     <i class="ri-shopping-bag-line"></i>
-                    <span
+                    <span id="cart_count"
                         class="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-black text-[10px] font-bold text-white">
-                        
+                        0
                     </span>
                 </a>
                 <a href="#" class="hover:text-black transition-colors w-[22px] flex items-center justify-center">
@@ -54,7 +54,7 @@
             </div>
 
             <div class="nav_logo">
-                <a href="./bohemaintraders.html">
+                <a href="./index.html">
                     <img src="./image/logo.webp" alt="Logo" class="w-[250px] md:w-[300px] h-auto max-w-full">
                 </a>
             </div>
@@ -572,6 +572,18 @@
             <img src="./image/typing.png" alt="">
         </a>
     </div>
+    <script>
+        // Initialize cart count on page load
+        function updateCartCount() {
+            const cartCountElement = document.getElementById("cart_count");
+            if (!cartCountElement) return;
+            
+            const cart = JSON.parse(localStorage.getItem("bohemian_cart")) || [];
+            cartCountElement.textContent = cart.length;
+        }
+        
+        document.addEventListener("DOMContentLoaded", updateCartCount);
+    </script>
 </body>
 
 </html>

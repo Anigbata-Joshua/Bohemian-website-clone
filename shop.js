@@ -1,8 +1,18 @@
 let base_url = "http://ecommerce.reworkstaging.name.ng/v2";
 let merchantId = localStorage.getItem("merchant_id");
-// let product_view_header = document.getElementById("product_view_header")
-// let product_view = document.querySelectorAll(".product_view")
 let productArry = []; shopProducts
+
+// Update cart count in the navigation
+function updateCartCount() {
+    const cartCountElement = document.getElementById("cart_count");
+    if (!cartCountElement) return;
+    
+    const cart = JSON.parse(localStorage.getItem("bohemian_cart")) || [];
+    cartCountElement.textContent = cart.length;
+}
+
+// Initialize cart count on page load
+document.addEventListener("DOMContentLoaded", updateCartCount);
 
 function shopProducts() {
     let shopGrid = document.getElementById("shop_grid");
@@ -87,6 +97,7 @@ function handleAddToCart(productId) {
 
     cart.push(cartItem);
     localStorage.setItem("bohemian_cart", JSON.stringify(cart));
+    updateCartCount();
 
     alert(`${selectedProduct.title} added to cart.`);
 }
